@@ -1,0 +1,46 @@
+.taskForm {
+  width: 46rem;
+  /* height: 54px; */
+  /* background: #fff; */
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  align-items: center;
+  top: 10.8125rem;
+  left: calc(50% - 46rem / 2);
+}
+
+.taskForm textarea {
+  width: 39.875rem;
+  height: 3.375rem;
+  color: var(--gray-300);
+  background: var(--gray-500);
+  resize: none;
+  border: 1;
+  border-color: var(--gray-700);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+}
+
+.taskForm textarea:focus {
+  color: var(--gray-100);
+  border-color: var(--purple-dark);
+}
+
+.taskForm button {
+  width: 5.625rem;
+  height: 3.25rem;
+  background: var(--blue-dark);
+  border: 0;
+  border-radius: 8px;
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
+.taskForm button:hover {
+  background: var(--blue);
+}
