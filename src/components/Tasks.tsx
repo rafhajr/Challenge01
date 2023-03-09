@@ -1,4 +1,5 @@
 import { EmptyState } from "./EmptyState";
+import { Task } from "./Task";
 import styles from "./tasks.module.css";
 
 export function Tasks() {
@@ -16,7 +17,8 @@ export function Tasks() {
         </div>
       </div>
       <div className={styles.body}>
-        <EmptyState />
+        {/* <EmptyState /> */}
+        <Task />
       </div>
     </div>
   );

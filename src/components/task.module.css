@@ -1,0 +1,91 @@
+.taskContainer {
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+  /* display: grid;
+  grid-template-columns: 1fr 10fr 1fr; */
+
+  display: flex;
+  padding: 20px;
+
+  gap: 16px;
+
+  border: 0.0625rem solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.taskContent {
+  width: 39.5rem;
+}
+
+.buttonContent {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uncheckedButton {
+  background: var(--gray-500);
+  width: 1.0906rem;
+  height: 1.0906rem;
+  border: 0.1875rem solid var(--blue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.uncheckedButton:hover {
+  background: var(--blue-dark);
+}
+
+.checkedButton {
+  background: var(--purple-dark);
+  width: 1.0906rem;
+  height: 1.0906rem;
+  border: 0.1875rem solid var(--purple-dark);
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkedButton:hover {
+  border-color: var(--purple);
+  background: var(--purple);
+}
+
+.trashButton {
+  background: var(--gray-500);
+  border: 0;
+  cursor: pointer;
+}
+
+.trashButtonContent {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.trashButtonContent:hover {
+  background-color: var(--gray-400);
+}
+
+.trashButtonContent:hover button {
+  background-color: var(--gray-400);
+}
+
+.checkedText {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
