@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
-import style from "./taskCreator.module.css";
+import plus from "../assets/plus.svg";
+import styles from "./taskCreator.module.css";
 
 interface ITaskCreator {
   onNewTask: (task: string) => void;
@@ -28,7 +29,7 @@ export function TaskCreator({ onNewTask }: ITaskCreator) {
   const isNewCommentEmpty = !!!newCommentText;
 
   return (
-    <form onSubmit={handleNewTask} className={style.taskForm}>
+    <form onSubmit={handleNewTask} className={styles.taskForm}>
       <textarea
         placeholder="Adicione uma nova tarefa"
         onChange={handleNewCommentChange}
@@ -38,6 +39,7 @@ export function TaskCreator({ onNewTask }: ITaskCreator) {
       />
       <button type="submit" disabled={isNewCommentEmpty}>
         Criar
+        <img src={plus} />
       </button>
     </form>
   );

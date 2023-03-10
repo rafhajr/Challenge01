@@ -8,10 +8,14 @@ interface ITasks {
     description: string;
     isChecked: boolean;
   }[];
+  onCheckedTask: (id: number) => void;
+  onDeleteTask: (id: number) => void;
 }
-export function Tasks({ tasks }: ITasks) {
+export function Tasks({ tasks, onCheckedTask, onDeleteTask }: ITasks) {
   const hasTasks = tasks.length > 0;
-
+  const countCloncluseTasks = tasks.filter(
+    (tasks) => tasks.isChecked === true
+  ).length;
   return (
     <div className={styles.tasks}>
       <div className={styles.header}>
@@ -22,10 +26,23 @@ export function Tasks({ tasks }: ITasks) {
 
         <div className={styles.title}>
           <p className={styles.finishedTasks}>Concluídas</p>
-          <p className={styles.counter}>0</p>
+          <p className={styles.counter}>{countCloncluseTasks}</p>
         </div>
       </div>
-      <div className={styles.body}>{hasTasks ? <Task /> : <EmptyState />}</div>
+      <div className={styles.body}>
+        {hasTasks ? (
+          tasks.map((task) => (
+            <Task
+              key={task.id}
+              task={task}
+              onCheckedTask={onCheckedTask}
+              onDeleteTask={onDeleteTask}
+            />
+          ))
+        ) : (
+          <EmptyState />
+        )}
+      </div>
     </div>
   );
 }

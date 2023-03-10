@@ -39,6 +39,11 @@
   border-radius: 8px;
   color: var(--gray-100);
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .taskForm button:hover {
